@@ -1,0 +1,63 @@
+:root {
+  // colors
+
+  --col-primary: var(--col-purple-700);
+  --col-secondary: var(--col-white);
+
+  --col-white: #fff;
+  --col-black: #000;
+
+  --col-blue-900: #0d1333;
+  --col-blue-800: #0e2549;
+  --col-blue-700: #61688b;
+  --col-blue-600: #999fbf;
+  --col-blue-500: #4d79ff;
+  --col-blue-400: #4c79ff;
+  --col-blue-300: #4db5ff;
+  --col-blue-200: #80b4ff;
+
+  --col-violet-500: #9059ff;
+
+  --col-purple-800: #372b7b;
+  --col-purple-700: #473f97;
+  --col-purple-600: #6363eb;
+  --col-purple-500: #7777ff;
+  --col-purple-400: #b7b7ff;
+  --col-purple-300: #e1e1ff;
+  --col-purple-200: #dfe3f2;
+
+  --col-red-800: #ff4d58;
+  --col-red-700: #ff5959;
+  --col-red-600: #ff6670;
+  --col-red-500: #ffe5ee;
+  --col-red-400: #ffd7d7;
+  --col-red-300: #ffd8d6;
+  --col-red-200: #ffd9d7;
+
+  --col-green-600: #4cd97b;
+
+  --col-yellow-600: #ffb259;
+
+  // fonts
+
+  --font-primary: "Graphik";
+
+  // linear-gradients
+
+  --lin-gradient-pink: linear-gradient(
+    358.69deg,
+    #ffd9e6 -19.95%,
+    #ff4d88 127.17%
+  );
+
+  --lin-gradient-purple-800: linear-gradient(
+    63.99deg,
+    #8cc6ff 16.4%,
+    #8080ff 83.6%
+  );
+  --lin-gradient-purple-500: linear-gradient(
+    358.32deg,
+    #5252cc 1.61%,
+    #331f99 97.79%
+  );
+}
