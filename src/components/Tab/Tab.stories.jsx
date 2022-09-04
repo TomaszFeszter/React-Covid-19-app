@@ -10,13 +10,13 @@ export default {
 const Template = () => (
   <Tabs>
     <Tab title="My country">
-      <Heading>Twoja stara, zapierdala</Heading>
+      <Heading>test</Heading>
     </Tab>
     <Tab title="Global">
-      <Paragraph>Twój stary pijany</Paragraph>
+      <Paragraph>test2</Paragraph>
     </Tab>
-    <Tab title="pijany">
-      <Paragraph>Nie bo twój</Paragraph>
+    <Tab title="testtitle">
+      <Paragraph>test3</Paragraph>
     </Tab>
   </Tabs>
 );
