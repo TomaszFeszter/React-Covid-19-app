@@ -6,10 +6,6 @@
 .h2 {
   @include font(2rem, 2.2rem, 500, var(--font-primary), var(--col-black));
 
-  &--bold {
-    font-weight: 600;
-  }
-
   &--black {
     color: var(--col-black);
   }

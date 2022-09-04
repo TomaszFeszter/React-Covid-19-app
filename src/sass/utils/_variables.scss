@@ -17,6 +17,7 @@
   --col-blue-200: #80b4ff;
 
   --col-violet-500: #9059ff;
+  --col-violet-300: #6c65ac;
 
   --col-purple-800: #372b7b;
   --col-purple-700: #473f97;
@@ -51,13 +52,18 @@
   );
 
   --lin-gradient-purple-800: linear-gradient(
-    63.99deg,
-    #8cc6ff 16.4%,
-    #8080ff 83.6%
-  );
-  --lin-gradient-purple-500: linear-gradient(
     358.32deg,
     #5252cc 1.61%,
     #331f99 97.79%
+  );
+  --lin-gradient-purple-500: linear-gradient(
+    269.6deg,
+    #56549e 0.35%,
+    #aea1e6 101.48%
+  );
+  --lin-gradient-purple-300: linear-gradient(
+    63.99deg,
+    #8cc6ff 16.4%,
+    #8080ff 83.6%
   );
 }
