@@ -1,5 +1,5 @@
 import React from "react";
-import Banner from ".";
+import { Banner } from ".";
 
 export default {
   title: "Banner",

@@ -66,4 +66,10 @@
     #8cc6ff 16.4%,
     #8080ff 83.6%
   );
+
+  // box-shadows
+  --box-shadow-500: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
+
+  // text-shadows
+  --text-shadow-500: 2px 4px 3px rgba(0, 0, 0, 0.1);
 }

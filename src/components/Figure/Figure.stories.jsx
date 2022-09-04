@@ -1,5 +1,5 @@
 import React from "react";
-import Figure from ".";
+import { Figure } from ".";
 
 export default {
   title: "Figure",

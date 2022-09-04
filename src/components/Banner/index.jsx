@@ -1,6 +1,7 @@
 import React from "react";
+import { withMargin } from "../../hoc/withMargin";
 
-const Banner = ({ imgPath, children }) => {
+export const Banner = withMargin(({ imgPath, children }) => {
   return (
     <div className="banner">
       {imgPath && (
@@ -11,6 +12,4 @@ const Banner = ({ imgPath, children }) => {
       <div className="banner__container">{children}</div>
     </div>
   );
-};
-
-export default Banner;
+});

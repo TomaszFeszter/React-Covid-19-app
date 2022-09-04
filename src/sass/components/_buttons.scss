@@ -6,6 +6,11 @@
   border-radius: 5rem;
   @include font(1.4rem, 1.5rem, 500, "Graphik", var(--col-blue-900));
   background-color: var(--col-white);
+  transition: all 0.3s;
+
+  &:hover {
+    cursor: pointer;
+  }
 
   &--long {
     min-width: 16rem;
@@ -17,13 +22,27 @@
 
   &--secondary {
     @include font(1.6rem, 1.8rem, 500, var(--font-primary), var(--col-white));
+    background-color: transparent;
   }
 
   &--red {
     background-color: var(--col-red-800);
+    color: var(--col-white);
   }
 
   &--blue {
     background-color: var(--col-blue-500);
+    color: var(--col-white);
+  }
+
+  &--red,
+  &--blue {
+    @include flex;
+    @include gap(1.2rem);
+
+    &:hover {
+      transform: translateY(-0.2rem);
+      box-shadow: var(--box-shadow-500);
+    }
   }
 }
