@@ -13,7 +13,7 @@
   }
 
   &--long {
-    min-width: 16rem;
+    min-width: 15.5rem;
   }
 
   &--uppercase {
@@ -38,7 +38,7 @@
   &--red,
   &--blue {
     @include flex;
-    @include gap(1.2rem);
+    @include gap(false, 1.2rem);
 
     &:hover {
       transform: translateY(-0.2rem);

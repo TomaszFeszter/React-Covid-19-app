@@ -9,11 +9,12 @@
     padding: 0.8rem 1.6rem 0.8rem 0.8rem;
     @include flex(row, space-between);
     box-shadow: var(--box-shadow-500);
+    position: relative;
+    z-index: 2;
 
     svg {
       fill: var(--col-blue-700);
       stroke: var(--col-blue-700);
-      transform: rotate(90deg);
       transition: all 0.5s;
     }
   }
@@ -27,7 +28,6 @@
     .dropdown__list {
       display: block;
       position: absolute;
-      z-index: -1;
       transform: translateY(-2rem);
       > :first-child {
         min-height: 6rem;
@@ -50,7 +50,7 @@
     .dropdown__button {
       svg {
         transition: all 0.5s;
-        transform: rotate(-90deg);
+        transform: rotate(180deg);
       }
     }
   }

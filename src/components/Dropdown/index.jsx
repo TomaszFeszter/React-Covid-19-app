@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Play } from "react-feather";
+import { Triangle } from "react-feather";
 import { withMargin } from "../../hoc/withMargin";
 import { Paragraph } from "../Text";
 
@@ -25,7 +25,7 @@ export const Dropdown = withMargin(({ options }) => {
         onClick={() => setDropdownActive(!dropdownActive)}
       >
         <Paragraph type="p2">{selectedOption}</Paragraph>
-        <Play size={12} />
+        <Triangle size={12} />
       </button>
       <ul className="dropdown__list">
         {options.map((country) => (

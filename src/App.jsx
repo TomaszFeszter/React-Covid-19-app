@@ -1,13 +1,13 @@
-import { useState } from "react";
-import Button from "./components/Button";
+import { Home } from "./screens/Home";
 
 function App() {
-  const [count, setCount] = useState(0);
-
+  console.log("app");
   return (
     <div className="App">
+      <Home countries={["USA", "PL", "DE"]} />
     </div>
   );
 }
+// countries={["USA", "PL", "DE"]}
 
 export default App;

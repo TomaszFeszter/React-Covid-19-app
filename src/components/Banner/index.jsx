@@ -6,7 +6,7 @@ export const Banner = withMargin(({ imgPath, children }) => {
     <div className="banner">
       {imgPath && (
         <figure className="banner__img">
-          <img src={imgPath} height="110" width="110" alt="" />
+          <img src={imgPath} height="116" width="111" alt="" />
         </figure>
       )}
       <div className="banner__container">{children}</div>

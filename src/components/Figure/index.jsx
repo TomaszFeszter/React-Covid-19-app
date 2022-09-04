@@ -6,7 +6,9 @@ export const Figure = withMargin(({ imgPath, caption }) => {
   return (
     <figure className="figure">
       <img src={imgPath} width="90" height="90" />
-      <Heading type="h4">{caption}</Heading>
+      <Heading type="h4" mt={6}>
+        {caption}
+      </Heading>
     </figure>
   );
 });
