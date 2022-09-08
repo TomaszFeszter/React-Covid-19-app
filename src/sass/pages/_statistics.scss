@@ -1,0 +1,10 @@
+.statistics {
+  .header {
+    background-color: var(--col-purple-700);
+    padding: 2.4rem;
+    &__heading {
+      @include flex(row, space-between);
+      margin-bottom: 2.4rem;
+    }
+  }
+}

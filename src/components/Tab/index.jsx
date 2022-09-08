@@ -9,15 +9,18 @@ export const Tabs = withMargin(({ children }) => {
   const [active, setActive] = useState(0);
   return (
     <div className="tabs">
-      <div>
-        {React.Children.map(children, (child, index) => {
-          return (
-            <div className="tab" onClick={() => setActive(index)}>
-              {child.props.title}
-            </div>
-          );
-        })}
-      </div>
+      {React.Children.map(children, (child, index) => {
+        return (
+          <div
+            className={["tab", active === index && "tab--active"]
+              .filter(Boolean)
+              .join(" ")}
+            onClick={() => setActive(index)}
+          >
+            {child.props.title}
+          </div>
+        );
+      })}
       {React.Children.map(children, (child, index) => {
         if (React.isValidElement(child)) {
           return React.cloneElement(child, { active: index === active });

@@ -9,9 +9,9 @@ import avoidContact from "./images/avoid-contact.svg";
 import cleanHands from "./images/clean-hands.svg";
 import facemask from "./images/facemask.svg";
 import woman from "./images/woman.svg";
+import { NavBar } from "../../components/NavBar";
 
-export const Home = ({ countries }) => {
-  console.log("twoja stara");
+export const Home = () => {
   return (
     <React.Fragment>
       <div className="home">
@@ -20,7 +20,6 @@ export const Home = ({ countries }) => {
             <Heading type="h1" white>
               Covid-19
             </Heading>
-            <Dropdown options={countries} />
           </div>
           <section className="header__contact">
             <Heading type="h2" white>
@@ -62,6 +61,7 @@ export const Home = ({ countries }) => {
             </Paragraph>
           </Banner>
         </main>
+        <NavBar />
       </div>
     </React.Fragment>
   );

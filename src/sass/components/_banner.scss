@@ -4,6 +4,9 @@
   background-image: var(--lin-gradient-purple-500);
   border-radius: 1.6rem;
   @include flex(row, flex-start);
+  &:hover {
+    cursor: pointer;
+  }
 
   &__img {
     transform: translateY(-0.4rem);

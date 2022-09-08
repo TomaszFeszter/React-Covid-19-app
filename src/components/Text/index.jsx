@@ -2,10 +2,15 @@ import React from "react";
 import { withMargin } from "../../hoc/withMargin";
 
 export const Heading = withMargin(
-  ({ additionalClasses, type, children, white, semiBold }) => {
+  ({ additionalClasses, type, children, white, semiBold, medium }) => {
     let CustomTag = `${type ? type : "h2"}`;
     let classesTab =
-      [type, white && "text-white", semiBold && "text-semi-bold"]
+      [
+        type,
+        white && "text-white",
+        semiBold && "text-semi-bold",
+        medium && "text-medium",
+      ]
         .filter(Boolean)
         .join(" ") + ` ${additionalClasses}`;
     if (type === "h4") {
