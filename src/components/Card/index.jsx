@@ -3,7 +3,7 @@ import { Paragraph, Heading } from "../Text";
 import { withMargin } from "../../hoc/withMargin";
 
 export const Card = withMargin(
-  ({ big, title, value, yellow, red, green, blue, violet }) => {
+  ({ big, title, cases, yellow, red, green, blue, violet }) => {
     return (
       <div
         className={[
@@ -22,12 +22,12 @@ export const Card = withMargin(
           {title}
         </Paragraph>
         {big ? (
-          <Heading type="value" semiBold white>
-            {value}
+          <Heading type="cases" semiBold white>
+            {cases}
           </Heading>
         ) : (
           <Heading type="h2" white>
-            {value}
+            {cases}
           </Heading>
         )}
       </div>

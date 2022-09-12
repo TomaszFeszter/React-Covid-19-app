@@ -12,7 +12,7 @@ export const Default = Template.bind({});
 
 Default.args = {
   title: "TEST",
-  value: "336,851",
+  cases: "336,851",
   big: false,
   yellow: true,
   red: false,

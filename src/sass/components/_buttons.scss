@@ -27,18 +27,21 @@
 
   &--red {
     background-color: var(--col-red-800);
-    color: var(--col-white);
   }
 
   &--blue {
     background-color: var(--col-blue-500);
-    color: var(--col-white);
   }
 
   &--red,
   &--blue {
     @include flex;
     @include gap(false, 1.2rem);
+    @include font(1.6rem, 1.8rem, 500, var(--font-primary), var(--col-white));
+
+    svg {
+      fill: var(--col-white);
+    }
 
     &:hover {
       transform: translateY(-0.2rem);

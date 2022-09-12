@@ -2,7 +2,7 @@ import React from "react";
 import { withMargin } from "../../hoc/withMargin";
 
 export const Heading = withMargin(
-  ({ additionalClasses, type, children, white, semiBold, medium }) => {
+  ({ additionalClasses, type, children, white, semiBold, medium, opacity }) => {
     let CustomTag = `${type ? type : "h2"}`;
     let classesTab =
       [
@@ -10,6 +10,7 @@ export const Heading = withMargin(
         white && "text-white",
         semiBold && "text-semi-bold",
         medium && "text-medium",
+        opacity && "opacity-06",
       ]
         .filter(Boolean)
         .join(" ") + ` ${additionalClasses}`;
@@ -19,7 +20,8 @@ export const Heading = withMargin(
     if (type === "h3") {
       return <CustomTag className={classesTab}>{children}</CustomTag>;
     }
-    if (type === "h1" || "value") {
+    if (type === "h1" || "cases") {
+      if (type === "cases") CustomTag = "h2";
       return <CustomTag className={classesTab}>{children}</CustomTag>;
     }
 
@@ -28,9 +30,15 @@ export const Heading = withMargin(
 );
 
 export const Paragraph = withMargin(
-  ({ additionalClasses, type, white, children, semiBold }) => {
+  ({ additionalClasses, type, white, children, semiBold, medium, opacity }) => {
     let classesTab =
-      [type, white && "text-white", semiBold && "text-semi-bold"]
+      [
+        type,
+        white && "text-white",
+        semiBold && "text-semi-bold",
+        medium && "text-medium",
+        opacity && "opacity-06",
+      ]
         .filter(Boolean)
         .join(" ") + ` ${additionalClasses}`;
 

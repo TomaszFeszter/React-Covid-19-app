@@ -7,10 +7,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route
-          path="/statistics"
-          element={<Statistics countries={["USA", "PL", "DE"]} />}
-        />
+        <Route path="/statistics" element={<Statistics />} />
         <Route path="/news" element={<Home />} />
         <Route path="/settings" element={<Home />} />
       </Routes>

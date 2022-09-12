@@ -10,10 +10,11 @@ import cleanHands from "./images/clean-hands.svg";
 import facemask from "./images/facemask.svg";
 import woman from "./images/woman.svg";
 import { NavBar } from "../../components/NavBar";
+import { Page } from "../../layouts";
 
 export const Home = () => {
   return (
-    <React.Fragment>
+    <Page>
       <div className="home">
         <header className="header">
           <div className="header__heading">
@@ -25,7 +26,7 @@ export const Home = () => {
             <Heading type="h2" white>
               Are you feeling sick?
             </Heading>
-            <Paragraph type="p1" white>
+            <Paragraph type="p1" white opacity>
               If you feel sick with any of covid-19 symptoms please call or SMS
               us immediately for help.
             </Paragraph>
@@ -56,13 +57,12 @@ export const Home = () => {
             <Heading type="h3" white>
               Do your own test!
             </Heading>
-            <Paragraph type="p1" white>
+            <Paragraph type="p1" white opacity>
               Follow the instructions to do your own test.
             </Paragraph>
           </Banner>
         </main>
-        <NavBar />
       </div>
-    </React.Fragment>
+    </Page>
   );
 };

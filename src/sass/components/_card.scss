@@ -1,5 +1,5 @@
 .card {
-  max-width: 10rem;
+  min-width: 9.8rem;
   min-height: 10rem;
   background-color: var(--col-purple-500);
   @include flex(column, center, flex-start);

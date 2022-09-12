@@ -10,7 +10,7 @@
     @include flex(row, space-between);
     box-shadow: var(--box-shadow-500);
     position: relative;
-    z-index: 2;
+    z-index: 3;
 
     svg {
       fill: var(--col-blue-700);
@@ -23,6 +23,7 @@
   &__list {
     display: none;
     max-width: 11.6rem;
+    z-index: 2;
   }
   .dropdown__button:hover,
   .dropdown__list:hover {
@@ -31,6 +32,12 @@
   &--active {
     position: relative;
     .dropdown__list {
+      max-height: 22rem;
+      box-shadow: var(--box-shadow-800);
+      border-radius: 0 0 0 0.5rem;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      scrollbar-width: none;
       display: block;
       position: absolute;
       transform: translateY(-2rem);
@@ -39,7 +46,7 @@
         padding-top: 2rem;
       }
       > :last-child {
-        border-radius: 0 0 2.5rem 2.5rem;
+        border-radius: 0 0 0.5rem 0;
         border: none;
         box-shadow: var(--box-shadow-500);
       }
