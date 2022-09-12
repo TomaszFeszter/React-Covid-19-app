@@ -8,6 +8,7 @@ import { getCurrentDate, getPreviousWeekDate } from "../../utils/getDate";
 import { casesService } from "./services/casesService";
 import { Card } from "../../components/Card";
 import { countryOptions } from "../../utils/countries";
+import { formatNumber } from "../../utils/formatNumber";
 
 export const Statistics = () => {
   const [casesData, setCasesData] = useState(null);
@@ -39,19 +40,25 @@ export const Statistics = () => {
                     <Dashboard>
                       <Card
                         title="Confirmed"
-                        cases={casesData[casesData.length - 1].confirmed}
+                        cases={formatNumber.format(
+                          casesData[casesData.length - 1].confirmed
+                        )}
                         big
                         yellow
                       />
                       <Card
                         title="Deaths"
-                        cases={casesData[casesData.length - 1].deaths}
+                        cases={formatNumber.format(
+                          casesData[casesData.length - 1].deaths
+                        )}
                         big
                         red
                       />
                       <Card
                         title="Population"
-                        cases={casesData[casesData.length - 1].population}
+                        cases={formatNumber.format(
+                          casesData[casesData.length - 1].population
+                        )}
                         big
                         violet
                       />
@@ -63,19 +70,25 @@ export const Statistics = () => {
                     <Dashboard>
                       <Card
                         title="Confirmed daily"
-                        cases={casesData[casesData.length - 1].confirmed_daily}
+                        cases={formatNumber.format(
+                          casesData[casesData.length - 1].confirmed_daily
+                        )}
                         big
                         yellow
                       />
                       <Card
                         title="Deaths daily"
-                        cases={casesData[casesData.length - 1].deaths_daily}
+                        cases={formatNumber.format(
+                          casesData[casesData.length - 1].deaths_daily
+                        )}
                         big
                         red
                       />
                       <Card
                         title="Recovered daily"
-                        cases={casesData[casesData.length - 1].recovered_daily}
+                        cases={formatNumber.format(
+                          casesData[casesData.length - 1].recovered_daily
+                        )}
                         green
                       />
                     </Dashboard>
@@ -86,19 +99,25 @@ export const Statistics = () => {
                     <Dashboard>
                       <Card
                         title="Confirmed daily"
-                        cases={casesData[casesData.length - 2].confirmed_daily}
+                        cases={formatNumber.format(
+                          casesData[casesData.length - 2].confirmed_daily
+                        )}
                         big
                         yellow
                       />
                       <Card
                         title="Deaths daily"
-                        cases={casesData[casesData.length - 2].deaths_daily}
+                        cases={formatNumber.format(
+                          casesData[casesData.length - 2].deaths_daily
+                        )}
                         big
                         red
                       />
                       <Card
                         title="Recovered daily"
-                        cases={casesData[casesData.length - 2].recovered_daily}
+                        cases={formatNumber.format(
+                          casesData[casesData.length - 2].recovered_daily
+                        )}
                         green
                       />
                     </Dashboard>
