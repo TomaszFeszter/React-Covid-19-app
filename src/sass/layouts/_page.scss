@@ -1,6 +1,8 @@
 .page {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  max-width: 37.5rem;
+  height: 80rem;
+  width: 37.5rem;
+  background-color: var(--col-white);
+  box-shadow: var(--box-shadow-800);
 }

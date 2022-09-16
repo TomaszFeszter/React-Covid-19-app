@@ -4,23 +4,17 @@ import { Dropdown } from "../../components/Dropdown";
 import { Tab, Tabs } from "../../components/Tab";
 import { Heading } from "../../components/Text";
 import { Page } from "../../layouts";
-import { getCurrentDate, getPreviousWeekDate } from "../../utils/getDate";
-import { casesService } from "./services/casesService";
+
 import { Card } from "../../components/Card";
 import { countryOptions } from "../../utils/countries";
 import { formatNumber } from "../../utils/formatNumber";
+import { Example } from "../../components/Charts";
+import { useContext } from "react";
+import { CountriesContext } from "../../context/Countries";
 
 export const Statistics = () => {
-  const [casesData, setCasesData] = useState(null);
-
-  useEffect(() => {
-    casesService
-      .getCases("US", getPreviousWeekDate(), getCurrentDate())
-      .then((data) => {
-        setCasesData(data);
-        console.log(data);
-      });
-  }, []);
+  const { casesData, setSelectedCountry, selectedCountry } =
+    useContext(CountriesContext);
 
   return (
     <Page>
@@ -30,7 +24,11 @@ export const Statistics = () => {
             <Heading type="h1" white medium>
               Statistics
             </Heading>
-            <Dropdown options={countryOptions} />
+            <Dropdown
+              options={countryOptions}
+              changeSelectedCountry={setSelectedCountry}
+              selectedCountry={selectedCountry}
+            />
           </div>
           <Tabs>
             <Tab title="My country">
@@ -134,6 +132,14 @@ export const Statistics = () => {
             </Tab>
           </Tabs>
         </header>
+        <main className="main">
+          <Heading type="h2" mb={12}>
+            Daily New Cases
+          </Heading>
+          <section className="main__container">
+            {casesData && <Example data={casesData} />}
+          </section>
+        </main>
       </div>
     </Page>
   );

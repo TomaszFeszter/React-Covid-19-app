@@ -44,7 +44,7 @@ export const Home = () => {
         </header>
         <main className="main">
           <section className="main__prevention">
-            <Heading type="h2" mb={16}>
+            <Heading type="h2" mb={12}>
               Prevention
             </Heading>
             <div className="main__prevention__container">

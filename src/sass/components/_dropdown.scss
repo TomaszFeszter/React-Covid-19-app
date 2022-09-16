@@ -1,4 +1,10 @@
 .dropdown {
+  .fi.fis {
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 1.2rem;
+    border: 1px solid var(--col-grey-400);
+  }
   &__button {
     min-width: 11.6rem;
     min-height: 4rem;
@@ -34,7 +40,7 @@
     .dropdown__list {
       max-height: 22rem;
       box-shadow: var(--box-shadow-800);
-      border-radius: 0 0 0 0.5rem;
+      border-radius: 0 0 0.5rem 0.5rem;
       overflow-y: scroll;
       overflow-x: hidden;
       scrollbar-width: none;
@@ -46,7 +52,6 @@
         padding-top: 2rem;
       }
       > :last-child {
-        border-radius: 0 0 0.5rem 0;
         border: none;
         box-shadow: var(--box-shadow-500);
       }
@@ -54,9 +59,13 @@
       &__option {
         min-width: 11.6rem;
         min-height: 4rem;
+        border-top: none;
+        border-right: none;
         border-bottom: 1px solid var(--col-purple-300);
+        border-left: none;
         background-color: var(--col-white);
         @include flex;
+        @include gap(false, 1.2rem);
         transition: all 0.2s;
         &:hover {
           background-color: var(--col-purple-200);

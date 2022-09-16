@@ -11,7 +11,15 @@
       @include flex(row, space-between);
       margin-bottom: 2.4rem;
     }
-    .dashboard {
+  }
+  .main {
+    padding: 4rem 2.4rem 2rem;
+    margin-top: auto;
+    border-radius: 4rem 4rem 0 0;
+    background-color: var(--col-white);
+    &__container {
+      width: 32.5rem;
+      height: 16rem;
     }
   }
 }

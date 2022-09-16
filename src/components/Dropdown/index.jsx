@@ -2,43 +2,49 @@ import React, { useState } from "react";
 import { Triangle } from "react-feather";
 import { withMargin } from "../../hoc/withMargin";
 import { Paragraph } from "../Text";
+import "/node_modules/flag-icons/css/flag-icons.min.css";
 
-export const Dropdown = withMargin(({ options }) => {
-  const [selectedOption, setSelectedOption] = useState(options[0]);
-  const [dropdownActive, setDropdownActive] = useState(false);
+// lista opcjii, zmiana wartości, aktualna wartość, defaultowa wartość
+export const Dropdown = withMargin(
+  ({ options, changeSelectedCountry, selectedCountry }) => {
+    const [dropdownActive, setDropdownActive] = useState(false);
 
-  const handleClick = (value) => {
-    setSelectedOption(value);
-    setDropdownActive(!dropdownActive);
-  };
-
-  return (
-    <div
-      className={["dropdown", dropdownActive && "dropdown--active"]
-        .filter(Boolean)
-        .join(" ")}
-      // onChange={(e) => setSelectedCountry(e.target.value)}
-      // value={selectedCountry}
-    >
-      <button
-        className="dropdown__button"
-        onClick={() => setDropdownActive(!dropdownActive)}
+    const handleClick = () => {
+      setDropdownActive(!dropdownActive);
+    };
+    return (
+      <div
+        className={["dropdown", dropdownActive && "dropdown--active"]
+          .filter(Boolean)
+          .join(" ")}
       >
-        <Paragraph type="p2">{selectedOption}</Paragraph>
-        <Triangle size={12} />
-      </button>
-      <ul className="dropdown__list">
-        {options.map((country) => (
-          <div
-            className="dropdown__list__option"
-            onClick={() => handleClick(country)}
-            key={country}
-            value={country}
-          >
-            <Paragraph type="p2">{country}</Paragraph>
-          </div>
-        ))}
-      </ul>
-    </div>
-  );
-});
+        <div className="dropdown__button" onClick={handleClick}>
+          <span
+            className={`fi fi-${selectedCountry.iso2.toLowerCase()} fis `}
+          ></span>
+          <Paragraph type="p2" pt={2}>
+            {selectedCountry.iso3}
+          </Paragraph>
+          <Triangle size={12} />
+        </div>
+        <ul className="dropdown__list">
+          {options.map((country) => (
+            <div
+              className="dropdown__list__option"
+              onClick={() => {
+                handleClick();
+                changeSelectedCountry(country);
+              }}
+              key={country.iso3}
+            >
+              <span
+                className={`fi fi-${country.iso2.toLowerCase()} fis`}
+              ></span>
+              <Paragraph type="p2">{country.iso3}</Paragraph>
+            </div>
+          ))}
+        </ul>
+      </div>
+    );
+  }
+);

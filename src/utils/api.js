@@ -9,13 +9,13 @@ export const API = {
   GET_COUNTRY_CASES_BY_COUNTRY_AND_DATES(country, minDate, maxDate) {
     return (
       COVID_DATA_BASE_URL +
-      "countries_summary?country=" +
+      "countries_summary?country_iso3=" +
       country +
       "&min_date=" +
       minDate +
       "T00:00:00.000Z&max_date=" +
       maxDate +
-      "T00:00:00.000Z"
+      "T00:00:00.000Z&hide_fields=_id, combined_names, country_codes, country_iso2s"
     );
   },
 };
