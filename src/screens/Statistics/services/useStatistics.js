@@ -2,9 +2,9 @@ import { useState } from "react";
 import { API } from "../../../utils/api";
 import { countryOptions } from "../../../utils/countries";
 
-export const casesService = () => {
+export const useStatistics = () => {
   const [casesData, setCasesData] = useState(null);
-  const [selectedCountry, setSelectedCountry] = useState(countryOptions[1]);
+  const [selectedCountry, setSelectedCountry] = useState(countryOptions[0]);
 
   const getCases = async (selectedCountry, minDate, maxDate) => {
     try {

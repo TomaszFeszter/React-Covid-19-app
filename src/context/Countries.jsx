@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect } from "react";
-import { casesService } from "../screens/Statistics/services/casesService";
+import { useStatistics } from "../screens/Statistics/services/useStatistics";
 import { getCurrentDate, getPreviousWeekDate } from "../utils/getDate";
 
 export const CountriesContext = React.createContext(null);
@@ -12,7 +12,7 @@ export const CountriesProvider = ({ children }) => {
     selectedCountry,
     setSelectedCountry,
     getCases,
-  } = casesService();
+  } = useStatistics();
 
   useEffect(() => {
     if (!selectedCountry) return;

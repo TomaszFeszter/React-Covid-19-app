@@ -1,0 +1,30 @@
+.news-card {
+  max-width: 32.5rem;
+
+  &:hover {
+    cursor: pointer;
+
+    .news-card__img {
+      img {
+        filter: brightness(1.1);
+        box-shadow: var(--box-shadow-500);
+        transform: translateY(-2px);
+      }
+      .h2 {
+        text-shadow: var(--text-shadow-500);
+        transform: translateY(-2px);
+      }
+    }
+  }
+
+  &__img {
+    img {
+      transition: all 0.2s;
+      width: 100%;
+      border-radius: 3rem;
+    }
+    .h2 {
+      transition: all 0.2s;
+    }
+  }
+}

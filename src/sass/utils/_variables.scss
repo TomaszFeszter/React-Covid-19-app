@@ -70,9 +70,11 @@
   );
 
   // box-shadows
+  --box-shadow-910: 0px 15px 60px 3px rgba(66, 68, 90, 1);
+  --box-shadow-900: 0px -5px 62px 7px rgba(66, 68, 90, 1);
   --box-shadow-800: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
   --box-shadow-500: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
-
+  --box-shadow-500: rgba(66, 68, 90, 0.2) 0px 3px 5px 0px;
   // text-shadows
   --text-shadow-500: 2px 4px 3px rgba(0, 0, 0, 0.1);
 }

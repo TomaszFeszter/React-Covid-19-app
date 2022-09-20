@@ -4,9 +4,8 @@ import { withMargin } from "../../hoc/withMargin";
 import { Paragraph } from "../Text";
 import "/node_modules/flag-icons/css/flag-icons.min.css";
 
-// lista opcjii, zmiana wartości, aktualna wartość, defaultowa wartość
 export const Dropdown = withMargin(
-  ({ options, changeSelectedCountry, selectedCountry }) => {
+  ({ options, changeSelectedOption, selectedCountry }) => {
     const [dropdownActive, setDropdownActive] = useState(false);
 
     const handleClick = () => {
@@ -33,7 +32,7 @@ export const Dropdown = withMargin(
               className="dropdown__list__option"
               onClick={() => {
                 handleClick();
-                changeSelectedCountry(country);
+                changeSelectedOption(country);
               }}
               key={country.iso3}
             >

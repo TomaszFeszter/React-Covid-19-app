@@ -6,7 +6,7 @@
     border: 1px solid var(--col-grey-400);
   }
   &__button {
-    min-width: 11.6rem;
+    min-width: 12.1rem;
     min-height: 4rem;
     background-color: var(--col-white);
     border-radius: 5rem;
@@ -16,7 +16,7 @@
     @include flex(row, space-between);
     box-shadow: var(--box-shadow-500);
     position: relative;
-    z-index: 3;
+    z-index: 4;
 
     svg {
       fill: var(--col-blue-700);
@@ -28,8 +28,7 @@
 
   &__list {
     display: none;
-    max-width: 11.6rem;
-    z-index: 2;
+    z-index: 3;
   }
   .dropdown__button:hover,
   .dropdown__list:hover {

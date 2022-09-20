@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import { Dashboard } from "../../components/Dashboard";
 import { Dropdown } from "../../components/Dropdown";
 import { Tab, Tabs } from "../../components/Tab";
@@ -26,7 +25,7 @@ export const Statistics = () => {
             </Heading>
             <Dropdown
               options={countryOptions}
-              changeSelectedCountry={setSelectedCountry}
+              changeSelectedOption={setSelectedCountry}
               selectedCountry={selectedCountry}
             />
           </div>
