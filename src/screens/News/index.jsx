@@ -1,36 +1,39 @@
-import { Dropdown } from "../../components/Dropdown";
-import { Heading } from "../../components/Text";
 import { Page } from "../../layouts";
-import { countryOptions } from "../../utils/countries";
 import { useContext } from "react";
-import { CountriesContext } from "../../context/Countries";
 import { NewsContext } from "../../context/News";
 import { NewsCard } from "../../components/NewsCard";
+import { Loader } from "../../components/Loader";
+import { Error } from "../../components/Error";
+import { Header } from "../../features/Header";
 
 export const News = () => {
-  const { setSelectedCountry, selectedCountry } = useContext(CountriesContext);
-  const { newsData } = useContext(NewsContext);
+  const { data, loading, error } = useContext(NewsContext);
+
+  if (loading)
+    return (
+      <Page>
+        <div className="center full-size">
+          <Loader />
+        </div>
+      </Page>
+    );
+
+  if (error)
+    return (
+      <Page>
+        <Error>{error.message}</Error>
+      </Page>
+    );
 
   return (
     <Page>
       <div className="news">
-        <header className="header">
-          <div className="header__heading">
-            <Heading type="h1" white medium>
-              News
-            </Heading>
-            <Dropdown
-              options={countryOptions}
-              changeSelectedOption={setSelectedCountry}
-              selectedCountry={selectedCountry}
-            />
-          </div>
-        </header>
+        <Header title="News" dropdown />
         <main className="main">
           <section className="main__content">
             <div className="main__content__container">
-              {newsData &&
-                newsData.articles.map((data, index) => (
+              {data &&
+                data.articles.map((data, index) => (
                   <NewsCard
                     mb={18}
                     key={index}

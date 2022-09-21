@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { NewsContext } from "../../context/News";
 import { Heading } from "../../components/Text";
 import { Page } from "../../layouts";
+import { Header } from "../../features/Header";
 export const NewsPage = () => {
   const { newsData } = useContext(NewsContext);
   let { newsId } = useParams();
@@ -14,31 +15,25 @@ export const NewsPage = () => {
   return (
     <Page>
       <div className="news-page">
-        <header className="header">
-          <div className="header__heading">
-            <Heading type="h1" white medium mb={12}>
-              News
-            </Heading>
-            <Heading type="h2" white medium mb={2}>
-              Author: {author}
-            </Heading>
-            <Heading type="h3" white medium mb={2}>
-              Published: {publishedAt.split("T")[0]}
-            </Heading>
-          </div>
-        </header>
+        <Header />
         <main className="main">
           <section className="main__content">
+            <Heading type="h2" mb={8}>
+              {title}
+            </Heading>
             <figure className="news-card__img">
-              <img src={urlToImage} />
-              <Heading type="h2" mt={8} mb={20}>
-                {title}
+              <img src={urlToImage} width="320" height="180" alt="" />
+              <Heading type="h3" medium mt={2} mb={4}>
+                Author: {author}
+              </Heading>
+              <Heading type="h4" mb={18}>
+                Published: {publishedAt.split("T")[0]}
               </Heading>
             </figure>
-            <Heading type="h3" mb={10}>
+            <Heading type="h3" regular mb={10}>
               {description}
             </Heading>
-            <Heading type="h4" medium>
+            <Heading type="h4" regular>
               <a
                 className="h4"
                 href={url}

@@ -35,16 +35,6 @@ export const NavBar = () => {
           <FileText />
         </figure>
       </NavLink>
-      <NavLink
-        to="/settings"
-        className={({ isActive }) =>
-          isActive ? "nav-bar__link nav-bar__link--active" : "nav-bar__link"
-        }
-      >
-        <figure className="nav-bar__link__container">
-          <Settings />
-        </figure>
-      </NavLink>
     </div>
   );
 };

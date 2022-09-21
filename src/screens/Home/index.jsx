@@ -1,6 +1,5 @@
 import React from "react";
 import { Button } from "../../components/Button";
-import { Dropdown } from "../../components/Dropdown";
 import { Heading, Paragraph } from "../../components/Text";
 import { Phone, MessageCircle } from "react-feather";
 import { Figure } from "../../components/Figure";
@@ -9,19 +8,14 @@ import avoidContact from "./images/avoid-contact.svg";
 import cleanHands from "./images/clean-hands.svg";
 import facemask from "./images/facemask.svg";
 import woman from "./images/woman.svg";
-import { NavBar } from "../../components/NavBar";
 import { Page } from "../../layouts";
+import { Header } from "../../features/Header";
 
 export const Home = () => {
   return (
     <Page>
       <div className="home">
-        <header className="header">
-          <div className="header__heading">
-            <Heading type="h1" white>
-              Covid-19
-            </Heading>
-          </div>
+        <Header title="Covid-19">
           <section className="header__contact">
             <Heading type="h2" white>
               Are you feeling sick?
@@ -41,7 +35,7 @@ export const Home = () => {
               </Button>
             </div>
           </section>
-        </header>
+        </Header>
         <main className="main">
           <section className="main__prevention">
             <Heading type="h2" mb={12}>

@@ -5,15 +5,15 @@
   }
 
   .header {
-    padding: 3.2rem 2.4rem 2.4rem;
+    padding: 3.2rem 2.4rem;
 
     &__heading {
       @include flex(row, space-between);
-      margin-bottom: 2.4rem;
+      margin-bottom: 3.2rem;
     }
   }
   .main {
-    padding: 3.6rem 2.4rem 2rem;
+    padding: 4rem 2.4rem 2rem;
     margin-top: auto;
     border-radius: 4rem 4rem 0 0;
     background-color: var(--col-white);

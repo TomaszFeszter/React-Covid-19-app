@@ -4,6 +4,9 @@
   --col-primary: var(--col-purple-700);
   --col-secondary: var(--col-white);
 
+  --text-white: #fff;
+  --text-black: #000;
+
   --col-white: #fff;
   --col-black: #000;
 
@@ -77,6 +80,51 @@
   --box-shadow-500: rgba(66, 68, 90, 0.2) 0px 3px 5px 0px;
   // text-shadows
   --text-shadow-500: 2px 4px 3px rgba(0, 0, 0, 0.1);
+}
+
+:root[data-theme="dark"] {
+  --col-primary: var(--col-purple-700);
+  --col-secondary: var(--col-white);
+
+  --text-white: #fff;
+  --text-black: #c9c9c9;
+
+  --col-white: #2c2c2c;
+  --col-black: #fff;
+
+  --col-grey-400: #525252;
+
+  --col-blue-900: #0d1333;
+  --col-blue-800: #0e2549;
+  --col-blue-700: #61688b;
+  --col-blue-600: #999fbf;
+  --col-blue-500: #4d79ff;
+  --col-blue-400: #867de9;
+  --col-blue-300: #4db5ff;
+  --col-blue-200: #80b4ff;
+
+  --col-violet-500: #a171ff;
+  --col-violet-300: #6c65ac;
+
+  --col-purple-800: #372b7b;
+  --col-purple-700: #473f97;
+  --col-purple-600: #6363eb;
+  --col-purple-500: #7777ff;
+  --col-purple-400: #b7b7ff;
+  --col-purple-300: #e1e1ff;
+  --col-purple-200: #dfe3f2;
+
+  --col-red-800: #e04d4d;
+  --col-red-700: #f56464;
+  --col-red-600: #ff6670;
+  --col-red-500: #ffe5ee;
+  --col-red-400: #ffd7d7;
+  --col-red-300: #ffd8d6;
+  --col-red-200: #ffd9d7;
+
+  --col-green-600: #4cd97b;
+
+  --col-yellow-600: #ffb259;
 }
 
 @media (prefers-color-scheme: dark) {

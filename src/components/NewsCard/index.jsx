@@ -13,7 +13,7 @@ export const NewsCard = withMargin(
     return (
       <div onClick={handleClick} className={`news-card ${additionalClasses}`}>
         <figure className="news-card__img">
-          <img src={imgPath} />
+          <img src={imgPath} width="320" height="180" alt="" />
           <Heading type="h2" mt={8}>
             {title}
           </Heading>

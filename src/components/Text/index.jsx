@@ -2,14 +2,24 @@ import React from "react";
 import { withMargin } from "../../hoc/withMargin";
 
 export const Heading = withMargin(
-  ({ additionalClasses, type, children, white, semiBold, medium, opacity }) => {
+  ({
+    additionalClasses,
+    type,
+    children,
+    white,
+    regular,
+    semiBold,
+    medium,
+    opacity,
+  }) => {
     let CustomTag = `${type ? type : "h2"}`;
     let classesTab =
       [
         type,
         white && "text-white",
-        semiBold && "text-semi-bold",
+        regular && "text-regular",
         medium && "text-medium",
+        semiBold && "text-semi-bold",
         opacity && "opacity-06",
       ]
         .filter(Boolean)
@@ -30,13 +40,23 @@ export const Heading = withMargin(
 );
 
 export const Paragraph = withMargin(
-  ({ additionalClasses, type, white, children, semiBold, medium, opacity }) => {
+  ({
+    additionalClasses,
+    type,
+    white,
+    children,
+    regular,
+    semiBold,
+    medium,
+    opacity,
+  }) => {
     let classesTab =
       [
         type,
         white && "text-white",
-        semiBold && "text-semi-bold",
+        regular && "text-regular",
         medium && "text-medium",
+        semiBold && "text-semi-bold",
         opacity && "opacity-06",
       ]
         .filter(Boolean)

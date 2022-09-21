@@ -19,8 +19,8 @@
     z-index: 4;
 
     svg {
-      fill: var(--col-blue-700);
-      stroke: var(--col-blue-700);
+      fill: var(--text-black);
+      stroke: var(--text-black);
       transition: all 0.5s;
       transform: rotate(-180deg);
     }
@@ -58,16 +58,13 @@
       &__option {
         min-width: 11.6rem;
         min-height: 4rem;
-        border-top: none;
-        border-right: none;
-        border-bottom: 1px solid var(--col-purple-300);
-        border-left: none;
+        border-bottom: 1px solid var(--col-grey-400);
         background-color: var(--col-white);
         @include flex;
         @include gap(false, 1.2rem);
         transition: all 0.2s;
         &:hover {
-          background-color: var(--col-purple-200);
+          background-color: var(--col-grey-400);
         }
       }
     }

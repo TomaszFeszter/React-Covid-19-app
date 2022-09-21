@@ -1,21 +1,24 @@
 import React, { useEffect, useContext } from "react";
-import { useNews } from "../screens/News/services/useNews";
+import { useFetch } from "../hooks/useFetch";
+import { API } from "../utils/api";
 import { CountriesContext } from "./Countries";
 
 export const NewsContext = React.createContext(null);
 
 export const NewsProvider = ({ children }) => {
   const { selectedCountry } = useContext(CountriesContext);
-  const { newsData, setNewsData, getNews } = useNews();
+  const { data, getData, loading, error } = useFetch();
 
   useEffect(() => {
     if (!selectedCountry) return;
-    getNews(selectedCountry.lang.toLowerCase()).then((data) => {
-      setNewsData(data);
-    });
+    getData(
+      API.GET_COVID_NEWS_BY_COUNTRY_LANG(selectedCountry.lang.toLowerCase())
+    );
   }, [selectedCountry]);
 
   return (
-    <NewsContext.Provider value={{ newsData }}>{children}</NewsContext.Provider>
+    <NewsContext.Provider value={{ data, loading, error }}>
+      {children}
+    </NewsContext.Provider>
   );
 };
