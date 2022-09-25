@@ -1,0 +1,5 @@
+.figure {
+  @include flex(column);
+  @include gap(false, 1.2rem);
+  max-width: 9rem;
+}

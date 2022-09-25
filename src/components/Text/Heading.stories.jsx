@@ -14,4 +14,5 @@ Default.args = {
   children: "Text",
   type: "h1",
   white: false,
+  semiBold: false,
 };

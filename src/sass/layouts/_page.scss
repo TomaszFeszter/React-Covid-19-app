@@ -1,0 +1,15 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 80rem;
+  width: 37.5rem;
+  background-color: var(--col-white);
+  box-shadow: var(--box-shadow-800);
+}
+
+@media only screen and (min-width: 426px) {
+  .page {
+    border-radius: 5rem;
+    overflow: hidden;
+  }
+}

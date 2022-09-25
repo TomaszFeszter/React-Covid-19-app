@@ -1,7 +1,32 @@
 .text-white {
-  color: var(--col-white);
+  color: var(--text-white);
 }
 
 .text-green {
   color: green;
+}
+
+.text-regular {
+  font-weight: 400;
+}
+
+.text-medium {
+  font-weight: 500;
+}
+
+.text-semi-bold {
+  font-weight: 600;
+}
+
+.opacity-06 {
+  opacity: 0.6;
+}
+
+.center {
+  @include flex;
+}
+
+.full-size {
+  min-width: 100%;
+  min-height: calc(100% - 8rem);
 }

@@ -1,0 +1,5 @@
+.error {
+  @include flex(column);
+  text-align: center;
+  padding: 5rem;
+}

@@ -1,0 +1,36 @@
+.card {
+  min-width: 9.8rem;
+  min-height: 10rem;
+  background-color: var(--col-purple-500);
+  @include flex(column, center, flex-start);
+  border-radius: 0.8rem;
+  padding: 1.6rem 1.2rem 1rem 1.2rem;
+
+  :first-child {
+    margin-bottom: auto;
+  }
+
+  &--big {
+    min-width: 15.5rem;
+  }
+
+  &--yellow {
+    background-color: var(--col-yellow-600);
+  }
+
+  &--red {
+    background-color: var(--col-red-700);
+  }
+
+  &--green {
+    background-color: var(--col-green-600);
+  }
+
+  &--blue {
+    background-color: var(--col-blue-500);
+  }
+
+  &--violet {
+    background-color: var(--col-violet-500);
+  }
+}

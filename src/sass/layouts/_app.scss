@@ -1,0 +1,5 @@
+.App {
+  @include flex;
+  min-height: 100vh;
+  background-image: var(--lin-gradient-purple-500);
+}

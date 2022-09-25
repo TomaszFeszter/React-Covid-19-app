@@ -1,0 +1,5 @@
+.dashboard {
+  @include flex;
+  @include gap(1.6rem, 1.6rem);
+  flex-wrap: wrap;
+}

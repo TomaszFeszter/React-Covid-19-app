@@ -13,4 +13,7 @@ export const Default = Template.bind({});
 Default.args = {
   children: "Text",
   white: false,
+  semiBold: false,
+  mt: 2,
+  px: 4,
 };

@@ -6,9 +6,14 @@
   border-radius: 5rem;
   @include font(1.4rem, 1.5rem, 500, "Graphik", var(--col-blue-900));
   background-color: var(--col-white);
+  transition: all 0.3s;
+
+  &:hover {
+    cursor: pointer;
+  }
 
   &--long {
-    min-width: 16rem;
+    min-width: 15.5rem;
   }
 
   &--uppercase {
@@ -16,7 +21,8 @@
   }
 
   &--secondary {
-    @include font(1.6rem, 1.8rem, 500, var(--font-primary), var(--col-white));
+    @include font(1.6rem, 1.8rem, 500, var(--font-primary), var(--text-white));
+    background-color: transparent;
   }
 
   &--red {
@@ -25,5 +31,21 @@
 
   &--blue {
     background-color: var(--col-blue-500);
+  }
+
+  &--red,
+  &--blue {
+    @include flex;
+    @include gap(false, 1.2rem);
+    @include font(1.6rem, 1.8rem, 500, var(--font-primary), var(--text-white));
+
+    svg {
+      fill: var(--text-white);
+    }
+
+    &:hover {
+      transform: translateY(-0.2rem);
+      box-shadow: var(--box-shadow-500);
+    }
   }
 }

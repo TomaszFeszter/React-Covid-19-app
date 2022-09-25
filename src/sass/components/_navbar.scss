@@ -1,0 +1,27 @@
+.nav-bar {
+  margin-top: auto;
+  padding: 2.2rem 2.4rem;
+  @include flex(row, space-around);
+  background-color: var(--col-white);
+  &__link {
+    &__container {
+      min-width: 5.6rem;
+      min-height: 3.6rem;
+      border-radius: 5rem;
+      @include flex;
+
+      svg {
+        stroke: var(--col-blue-600);
+      }
+    }
+    &--active {
+      .nav-bar__link__container {
+        background-color: var(--col-blue-400);
+
+        svg {
+          stroke: var(--col-white);
+        }
+      }
+    }
+  }
+}
