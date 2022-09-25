@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { Home, Settings, FileText, BarChart2 } from "react-feather";
+import { Home, FileText, BarChart2 } from "react-feather";
 
 export const NavBar = () => {
   return (

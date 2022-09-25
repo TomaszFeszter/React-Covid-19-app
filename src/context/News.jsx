@@ -14,6 +14,7 @@ export const NewsProvider = ({ children }) => {
     getData(
       API.GET_COVID_NEWS_BY_COUNTRY_LANG(selectedCountry.lang.toLowerCase())
     );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedCountry]);
 
   return (

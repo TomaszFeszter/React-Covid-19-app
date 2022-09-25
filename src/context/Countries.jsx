@@ -20,6 +20,7 @@ export const CountriesProvider = ({ children }) => {
         getCurrentDate()
       )
     );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedCountry]);
 
   return (

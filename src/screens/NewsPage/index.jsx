@@ -5,12 +5,12 @@ import { Heading } from "../../components/Text";
 import { Page } from "../../layouts";
 import { Header } from "../../features/Header";
 export const NewsPage = () => {
-  const { newsData } = useContext(NewsContext);
+  const { data } = useContext(NewsContext);
   let { newsId } = useParams();
 
-  if (!newsData || !newsId) return null;
+  if (!data || !newsId) return null;
   const { author, description, publishedAt, source, title, url, urlToImage } =
-    newsData && newsData.articles[newsId];
+    data && data.articles[newsId];
 
   return (
     <Page>
